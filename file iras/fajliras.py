@@ -1,0 +1,5 @@
+wr=open("florian.txt",'w')
+wr.write("Flórián Attila")
+wr.close()
+wr=open("florian.txt","a")
+wr.write("\n2021.10.20")
