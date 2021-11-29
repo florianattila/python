@@ -1,0 +1,6 @@
+Halmazok tulajdonságai és előnyei: 
+    - rendezetlen
+    - többféle típust tárolhat
+    - a halmaz eleme nem változtatható meg
+    - egy elem csak egyszer szerepelhet
+    - két halmaz közti különbségeket, hasonlóságokat stb is meg lehet nézni
