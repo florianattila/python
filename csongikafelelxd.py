@@ -10,7 +10,7 @@ SZAM3 = 5
 szamok2 = {}
 szamok2.add(szam1)
 szamok2.add(szam2)
-szamok2.add(S)
+szamok2.add(SZAM3)
 #lista
 szamok = []
 szamok.append(szam1)

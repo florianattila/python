@@ -1,11 +1,11 @@
 #61
-re = open("M:\\JanzsoG\\10B_2021\\adat.txt","r")
+re = open("M:\\JanzsóG\\10B_2021\\adat.txt","r")
 line = re.readline()
 print(line)
 re.close
 
 
-re = open("M:\\JanzsoG\\10B_2021\\adat.txt","r")
+re = open("M:\\JanzsóG\\10B_2021\\adat.txt","r")
 line = re.readline
 while line !="":
     line=line.strip()
@@ -13,7 +13,7 @@ while line !="":
     line = re.readline()
 re.close()
 
-re = open("M:\\JanzsoG\\10B_2021\\adat.txt", "r")
+re = open("M:\\JanzsóG\\10B_2021\\adat.txt", "r")
 line= re.readline()
 while line !="":
     line = line.strip()
@@ -28,7 +28,7 @@ re.close
 class Needs():
     pass
 need=[]
-re = open("igeny.txt","r")
+re = open("H:\\florianad\\python\\igeny.txt","r")
 line = re.readline()
 line=re.readline()
 rn = int(re.readline())
@@ -44,3 +44,5 @@ for i in range(rn):
     need[i].start = int(datas[4])
     need[i].stop = int(datas[5])
 re.close()
+
+calami = open()
