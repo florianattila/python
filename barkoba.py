@@ -1,10 +1,13 @@
 import random
 
+#verzió: Béta v2.1
 #változók definiálása
 tipp = None
 gondoltam = None
 kategoria = None
 rakerdezel = None
+proba = None
+nehezseg = None
 
 #függvények és eljárások
 def ellenorzes(tipp):
@@ -30,7 +33,9 @@ kutya = {
     "szárny" : "nincs",
     "kar" : "nincs",
     "veszélyes" : "nem",
-    "szín" : ["fekete", "barna", "fehér", "szürke"]
+    "szín" : ["fekete", "barna", "fehér", "szürke"],
+    "fog" : "van",
+    "toll" : "nincs",
 }
 
 macska = {
@@ -44,21 +49,25 @@ macska = {
     "szárny" : "nincs",
     "kar" : "nincs",
     "veszélyes" : "nem",
-    "szín" : ["fekete", "barna", "fehér", "szürke"]
+    "szín" : ["fekete", "barna", "fehér", "szürke"],
+    "fog" : "van",
+    "toll" : "nincs",
 }
 
-aranyhal = {
+ponty = {
     "él" : "víz",
     "lábai száma" : "0",
-    "méret" : "kicsi",
+    "méret" : "közepes",
     "táplálkozás" : "mindenevő",
-    "szelídített":"házi",
-    "osztály" : "emlős",
-    "törzs" : "gerinces",
+    "szelídített":"vad",
+    "osztály" : "hal",
+    "törzs" : "gerinchúros",
     "szárny" : "nincs",
     "kar" : "nincs",
     "veszélyes" : "nem",
-    "szín" : ["arany"]
+    "szín" : ["barna"],
+    "fog" : "nincs",
+    "toll" : "nincs",
 }
 
 légy = {
@@ -72,7 +81,9 @@ légy = {
     "szárny" : "van",
     "kar" : "nincs",
     "veszélyes" : "nem",
-    "szín" : ["fekete", "szürke"]
+    "szín" : ["fekete", "szürke"],
+    "fog" : "nincs",
+    "toll" : "nincs",
 }
 
 galamb = {
@@ -80,13 +91,15 @@ galamb = {
     "lábai száma" : "2",
     "méret" : "kicsi",
     "táplálkozás" : "mindenevő",
-    "szelídített":"házitályi",
+    "szelídített":"háztályi",
     "osztály" : "madár",
     "törzs" : "gerinces",
     "szárny" : "van",
     "kar" : "nincs",
     "veszélyes" : "nem",
-    "szín" : ["fehér","szürke"]
+    "szín" : ["fehér","szürke"],
+    "fog" : "nincs",
+    "toll" : "van",
     }
 
 polip = {
@@ -100,7 +113,9 @@ polip = {
     "szárny" : "nincs",
     "kar" : "van",
     "veszélyes" : "nem",
-    "szín" : ["barna", "narancssárga", "vörös"]
+    "szín" : ["barna", "narancssárga", "vörös"],
+    "fog" : "nincs",
+    "toll" : "nincs",
     }
 
 majom = {
@@ -114,7 +129,9 @@ majom = {
     "szárny" : "nincs",
     "kar" : "van",
     "veszélyes" : "nem",
-    "szín" : ["fekete", "barna", "szürke", "bőrszín"]
+    "szín" : ["fekete", "barna", "szürke", "bőrszín"],
+    "fog" : "van",
+    "toll" : "nincs",
     }
 
 csirke = {
@@ -128,7 +145,9 @@ csirke = {
     "szárny" : "van",
     "kar" : "nincs",
     "veszélyes" : "nem",
-    "szín" : ["fekete", "barna", "fehér", "citromsárga"]
+    "szín" : ["fekete", "barna", "fehér", "citromsárga"],
+    "fog" : "nincs",
+    "toll" : "van",
     }
 
 csiga = {
@@ -136,13 +155,15 @@ csiga = {
     "lábai száma" : "0",
     "méret" : "kicsi",
     "táplálkozás" : "növényevő",
-    "szelídített":"házitályi",
+    "szelídített":"háztályi",
     "osztály" : "csigák",
     "törzs" : "puhatestű",
     "szárny" : "nincs",
     "kar" : "nincs",
     "veszélyes" : "nem",
-    "szín" : ["bőrszín", "barna"]
+    "szín" : ["bőrszín", "barna"],
+    "fog" : "nincs",
+    "toll" : "nincs",
     }
 
 méh = {
@@ -150,13 +171,15 @@ méh = {
     "lábai száma" : "6",
     "méret" : "apró",
     "táplálkozás" : "növényevő",
-    "szelídített":"házitályi",
+    "szelídített":"háztályi",
     "osztály" : "rovarok",
     "törzs" : "ízelt lábú",
     "szárny" : "van",
     "kar" : "nincs",
     "veszélyes" : "igen",
-    "szín" : ["fekete", "sárga"]
+    "szín" : ["fekete", "sárga"],
+    "fog" : "nincs",
+    "toll" : "nincs",
     }
 
 lajhár = {
@@ -166,11 +189,13 @@ lajhár = {
     "táplálkozás" : "növényevő",
     "szelídített":"vad",
     "osztály" : "emlős",
-    "törzs" : "gerices",
+    "törzs" : "gerinces",
     "szárny" : "nincs",
     "kar" : "van",
     "veszélyes" : "nem",
-    "szín" : ["barna"]
+    "szín" : ["barna"],
+    "fog" : "van",
+    "toll" : "nincs",
     }
 
 ló = {
@@ -180,11 +205,13 @@ ló = {
     "táplálkozás" : "növényevő",
     "szelídített":"házi",
     "osztály" : "emlős",
-    "törzs" : "gerices",
+    "törzs" : "gerinces",
     "szárny" : "nincs",
     "kar" : "nincs",
     "veszélyes" : "nem",
-    "szín" : ["fekete", "barna", "fehér", "szürke"]
+    "szín" : ["fekete", "barna", "fehér", "szürke"],
+    "fog" : "van",
+    "toll" : "nincs",
     }
 
 pingvin = {
@@ -194,26 +221,154 @@ pingvin = {
     "táplálkozás" : "ragadozó",
     "szelídített":"vad",
     "osztály" : "madár",
-    "törzs" : "gerices",
+    "törzs" : "gerinces",
     "szárny" : "van",
     "kar" : "nincs",
     "veszélyes" : "nem",
-    "szín" : ["fekete", "fehér"]
+    "szín" : ["fekete", "fehér"],
+    "fog" : "nincs",
+    "toll" : "van",
     }
 
-allatok = [kutya, macska, aranyhal, galamb, légy, polip, majom, csirke, csiga, méh, ló, pingvin]
-allatszamlista = [0,1,2,3,4,5,6,7,8,9,10,11]
-megoldaslista = ["kutya", "macska", "aranyhal", "galamb", "légy", "polip", "majom", "csirke", "csiga", "méh", "ló", "pingvin"]
+cápa = {
+    "él" : "víz",
+    "lábai száma" : "0",
+    "méret" : "nagy",
+    "táplálkozás" : "ragadozó",
+    "szelídített":"vad",
+    "osztály" : "hal",
+    "törzs" : "gerinces",
+    "szárny" : "nincs",
+    "kar" : "nincs",
+    "veszélyes" : "igen",
+    "szín" : ["szürke", "fehér"],
+    "fog" : "van",
+    "toll" : "nincs",
+    }
+
+kacsa = {
+    "él" : "szárazföld",
+    "lábai száma" : "2",
+    "méret" : "kicsi",
+    "táplálkozás" : "mindenevő",
+    "szelídített":"házi",
+    "osztály" : "madár",
+    "törzs" : "gerinces",
+    "szárny" : "van",
+    "kar" : "nincs",
+    "veszélyes" : "nem",
+    "szín" : ["szürke", "fehér"],
+    "fog" : "nincs",
+    "toll" : "van",
+    }
+
+medve = {
+    "él" : "szárazföld",
+    "lábai száma" : "4",
+    "méret" : "nagy",
+    "táplálkozás" : "ragadozó",
+    "szelídített":"vad",
+    "osztály" : "emlős",
+    "törzs" : "gerinces",
+    "szárny" : "nincs",
+    "kar" : "nincs",
+    "veszélyes" : "igen",
+    "szín" : ["barna"],
+    "fog" : "van",
+    "toll" : "nincs",
+    }
+
+zsiráf = {
+    "él" : "szárazföld",
+    "lábai száma" : "4",
+    "méret" : "nagy",
+    "táplálkozás" : "növényevő",
+    "szelídített":"vad",
+    "osztály" : "emlős",
+    "törzs" : "gerinces",
+    "szárny" : "nincs",
+    "kar" : "nincs",
+    "veszélyes" : "nem",
+    "szín" : ["sárga"],
+    "fog" : "van",
+    "toll" : "nincs",
+    }
+
+kecske = {
+    "él" : "szárazföld",
+    "lábai száma" : "4",
+    "méret" : "közepes",
+    "táplálkozás" : "növényevő",
+    "szelídített":"házi",
+    "osztály" : "emlős",
+    "törzs" : "gerinces",
+    "szárny" : "nincs",
+    "kar" : "nincs",
+    "veszélyess" : "nem",
+    "szín" : ["fehér", "barna"],
+    "fog" : "van",
+    "toll" : "nincs",
+    }
+
+tehén = {
+    "él" : "szárazföld",
+    "lábai száma" : "4",
+    "méret" : "nagy",
+    "táplálkozás" : "növényevő",
+    "szelídített":"házi",
+    "osztály" : "emlős",
+    "törzs" : "gerinces",
+    "szárny" : "nincs",
+    "kar" : "nincs",
+    "veszélyes" : "nem",
+    "szín" : ["barna","fehér", "fekete", "szürke"],
+    "fog" : "van",
+    "toll" : "nincs",
+    }
+
+bálna = {
+    "él" : "víz",
+    "lábai száma" : "0",
+    "méret" : "nagy",
+    "táplálkozás" : "ragadozó",
+    "szelídített":"van",
+    "osztály" : "emlős",
+    "törzs" : "gerinces",
+    "szárny" : "nincs",
+    "kar" : "nincs",
+    "veszélyes" : "nem",
+    "szín" : ["kék", "fehér", "szürke"],
+    "fog" : "van",
+    "toll" : "nincs",
+    }
+
+allatok = [kutya, macska, ponty, galamb, légy, polip, majom, csirke, csiga, méh, ló, pingvin, cápa, kacsa, medve, zsiráf, kecske, tehén, bálna]
+allatszamlista = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+megoldaslista = ["kutya", "macska", "ponty", "galamb", "légy", "polip", "majom", "csirke", "csiga", "méh", "ló", "pingvin", "cápa", "kacsa","medve", "zsiráf","kecske","tehén", "bálna"]
 
 #szabályok
 alahuzas("~")
-print("     --SZABÁLYOK--     ")
+print("     ---SZABÁLYOK---     ")
 print("1. három alkalommal kérdezhetsz rá, ha harmadjára sem sikerül eltalálnod az állatot, akkor kiesel.")
-print("2. A kategorizálások az alábbiak: \n él : szárazföld/ víz/ levegő  \n lábai száma : 0/2/4, \n méret : apró (pl. bogár), kicsi (pl tyúk), közepes (pl. kutya), nagy (pl. zsiráf)  \n táplálkozás : ragadozó/ növényevő/mindenevő \n szelídített : házi/ háztályi/ vad \n osztály : emlős/csigák/madár/stb. \n törzs : gerinces/ puhatestű/stb. \n szárny : nincs/van \n kar : nincs/van \n veszélyes : igen/nem \n szín : NINCS ÁRNYALAT")
+print("2. Ha rákérdezés közben a 'próbáim száma' szöveggel tudhatod meg mennyi próbád maradt.")
+print("3. A kategorizálások az alábbiak: \n él : szárazföld/ víz/ levegő  \n lábai száma : 0/2/4, \n méret : apró (pl. bogár), kicsi (pl tyúk), közepes (pl. kutya), nagy (pl. zsiráf)  \n táplálkozás : ragadozó/ növényevő/mindenevő \n szelídített : házi/ háztályi/ vad \n osztály : emlős/csigák/madár/stb. \n törzs : gerinces/ puhatestű/stb. \n szárny : nincs/van \n kar : nincs/van \n veszélyes : igen/nem \n szín : NINCS ÁRNYALAT \n fog : van/nincs \n toll : van/nincs")
 alahuzas("~")
 
+#Nehézsé
+nehezseg = input("\nVálasszon nehézséget: könnyű (3 próba), közepes (2 próba), nehéz (1 próba)!")
+if nehezseg == "könnyű":
+    proba = 3
+elif nehezseg == "közepes":
+    proba == 2
+elif nehezseg == "nehéz":
+    proba = 1
+else:
+    print("Nincs ilyen nehézség")
+
+    
+
+
 #Játék
-proba = 3
 allatszam = random.choice(allatszamlista)
 gondoltam = allatok[allatszam]
 megoldas = megoldaslista[allatszam]
@@ -228,6 +383,8 @@ while proba != 0:
     rakerdez = input("Mit gondolsz, mi a megoldás?")
     if rakerdez == megoldas:
         print("nyertél, ügyes vagy")
+    elif rakerdez == "próbáim száma":
+        print(f"{proba} próbád maradt.")
     else:
         proba -= 1
         print(proba, " próbálkozási lehetőséged maradt.")
