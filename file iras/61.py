@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #61
 re = open("M:\\JanzsóG\\10B_2021\\adat.txt","r")
 line = re.readline()
@@ -46,3 +47,17 @@ for i in range(rn):
 re.close()
 
 calami = open()
+=======
+re = open('H:\\python\\adat.txt','r')
+line = re.readline()
+while line !="":
+    print("Flórián Attila")
+    line = line.strip()
+    datas = line.split()
+    print("%s/%s %s %s/%s = "% \
+        (datas[0],datas[1],
+        datas[4],datas[2],
+        datas[3]))
+    line = re.readline()
+re.close()
+>>>>>>> 71779ab0d47ecb3fb51938b62aa3ba421f227e4f

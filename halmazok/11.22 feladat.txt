@@ -1,0 +1,11 @@
+kutya = {
+    'nev': input("A kutya neve "),
+    'eletkor': int(input("A kutya életkora ")),
+    'fajta': input("A kutya fajtája "),
+    'oltas': input("Rendelkezik érvényes oltással veszettség ellen? ")
+}
+
+print("név:", kutya["nev"])
+print("életkor:", kutya["eletkor"])
+print("fajta:", kutya["fajta"])
+print("oltás:", kutya["oltas"])
