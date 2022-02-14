@@ -1,0 +1,17 @@
+Az osztomeg 62.11kg
+4db 5-nel nagyobb zsak van
+A zsak atlaga 10.351666666666667kg
+A zsak 6db elemet tartalmaz
+A zsak legkisebb eleme 2kg
+A zsak legnagyobb eleme 20kg
+A 5kg-nal nagyobb zsakok ossztomege 55.11kg
+A legkönyebb zsák 2kg volt, a 1. napon.
+A legnehezebb zsák 20kg volt, a 4. napon
+A(z) 1. napon 33kg lisztet kapott
+A(z) 2. napon 18kg lisztet kapott
+A(z) 3. napon 39kg lisztet kapott
+A(z) 4. napon 39kg lisztet kapott
+A(z) 5. napon 44kg lisztet kapott
+A(z) 6. napon 33kg lisztet kapott
+A(z) 7. napon 27kg lisztet kapott
+A legnehezebb 44kg volt

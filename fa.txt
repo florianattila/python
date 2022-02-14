@@ -1,0 +1,3 @@
+A marciusi osszes fatermeles 2245m3
+A marciusi kitermelt fa atlaga: 72.41935483870968
+a legkisebb {legkisebb} volt, a legnagyobb {legnagyobb}f{nagy_termeles} alkalommal volt 70 feletti a napi termelesA 70 feletti termelések összege 1412Az össztermelesnek 62.895322939866375%-a nagytermelesA napok 54.83870967741935%-ában nagy termeles volt

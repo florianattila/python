@@ -12,3 +12,7 @@ while szam != " ":
     if szam != " ":
         szam = float(szam)
     pozneg(szam)
+
+wr=open("FA","w")
+wr.write("FA")
+wr.close()
