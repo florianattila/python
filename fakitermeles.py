@@ -1,7 +1,5 @@
 import random
 
-from sqlalchemy import false
-
 wr = open("fa.txt", "w")
 fa = []
 szam = 0
