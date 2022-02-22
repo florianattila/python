@@ -16,3 +16,7 @@ S itta az édes fényt, míg hona lett ez a sír?”
 
 Választ tudsz adni a kérdésre? Hány évig élt a sírfelirat a szerzője Diophantosz?
 """
+kor = 0
+while kor/6 + kor/12 + kor/7 + kor/2 + 5 + 4 != kor:
+    kor += 1
+print(kor)
