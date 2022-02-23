@@ -65,6 +65,8 @@ class Voltage(Unit):
             return Voltage(self.value / other)
         else:
             return "Nullával nem lehet osztani!"
+    def __idiv__(self,other):
+        return self.__div__(other)
         
 
 #Áram
@@ -72,15 +74,72 @@ class Current(Unit):
     def __init__(self, value):
         super().__init__(value, "A")
 
+    def __add__(self, other):
+        if type(other) == int or type(other) == float:
+            return Current(self.value+other)
+
+    def __iadd__ (self, other):
+        return self.__add__(other)
+
+    def __mul__ (self, other):
+        if type(other) == Voltage:
+            return Power(self.value * other.value)
+        elif type(other) == int or type(other) == float:
+            return Current(self.value*other)
+
+    def __imul__(self, other):
+        return self.__mul__(other)
+
+    def __div__(self,other):
+        if other.value != 0:
+            return Current(self.value / other)
+        else:
+            return "Nullával nem lehet osztani!"
+
+    def __idiv__(self,other):
+        return self.__div__(other)
+        
+
 #Teljesítmény
 class Power(Unit):
     def __init__(self, value):
         super().__init__(value, "W")
 
+    def __add__(self, other):
+        if type(other) == int or type(other) == float:
+            return Power(self.value+other)
+
+    def __iadd__ (self, other):
+        return self.__add__(other)
+
+    def __mul__ (self, other):
+        if type(other) == int or type(other) == float:
+            return Power(self.value*other)
+
+    def __imul__(self, other):
+        return self.__mul__(other)
+
+    def __div__(self,other):
+        if type(other) == int or type(other) == float:
+            if other != 0:
+                return Power(self.value/other)
+            else:
+                return "Nullával nem lehet osztani!"
+        elif type(other) == Current:
+            return Voltage(self.value/other.value) # W = AV
+        elif type(other) == Voltage:
+            return Current(self.value/other.value)
+
+    def __idiv__(self,other):
+        return self.__div__(other)
+        
 #Teszt
 feszultseg = Voltage(50.1)
 aram = Current(0.4)
+aram2 = Current(63)
+aram2 += 42 -77
 #teljesítmény = feszultseg * aram
 print(feszultseg)
 print(aram)
+print(aram2)
 #print(teljesítmény)
