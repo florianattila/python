@@ -57,17 +57,26 @@ def Menu(menuopciok):
     print("--------------")
     for key in opciogomb:
         print(key + ":\t" + menuopciok[key]["text"])
-
+"""
+menuopciok = {
+        "Q" : {"function": kilepes(), "text": "Kilépés a játékból"},
+        "F" : {"function": etetes(), "text": allat["nev"] + " etetése"},
+        "S" : {"function": jatekszerzes(), "text": "Bolt"},
+    }
+"""
 def jatek():
     allatvalasztas()
     menuopciok = {
         "Q" : {"function":kilepes(), "text": "Kilépés a játékból"},
         "F" : {"function": etetes(), "text": allat["nev"] + " etetése"},
+        "S" : {"function": jatekszerzes(), "text": "Bolt"},
     }
     Menu(menuopciok)
 
 jatekfut = True
 while jatekfut:
     menuvalasztas = ""
-    #while menuvalasztas not in menuopciok.keys():
-    #    Menu(menuopciok)
+    jatek()
+    while menuvalasztas not in menuopciok.keys():
+        Menu(menuopciok)
+        menuvalasztas = input("Válasszon menüt!")
