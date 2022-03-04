@@ -21,54 +21,68 @@ def felvetel(egyenleg):
         if key == 1:
             felvetel=1000000
             if egyenleg - felvetel < 0:
-                return "Nincsen elég egyenleg a számlán\n -----------------------", bank(egyenleg)
+                print("Nincsen elég egyenleg a számlán\n -----------------------")
+                return bank(egyenleg)
             else:
                 egyenleg -= felvetel;
-                return "Felvette a pénzt\n -----------------------", egyenleg, bank(egyenleg)
+                print("Felvette a pénzt\n -----------------------")
+                return egyenleg, bank(egyenleg)
         elif key == 2:
             felvetel=500000
             if egyenleg - felvetel < 0:
-                return "Nincsen elég egyenleg a számlán\n -----------------------", bank(egyenleg)
+                print("Nincsen elég egyenleg a számlán\n -----------------------")
+                return bank(egyenleg)
             else:
                 egyenleg -= felvetel;
-                return "Felvette a pénzt\n -----------------------", egyenleg, bank(egyenleg)
+                print("Felvette a pénzt\n -----------------------")
+                return egyenleg, bank(egyenleg)
         elif key == 3:
                 felvetel=25000;
                 if egyenleg - felvetel < 0:
-                    return "Nincsen elég egyenleg a számlán\n -----------------------", bank(egyenleg)
+                    print("Nincsen elég egyenleg a számlán\n -----------------------")
+                    return bank(egyenleg)
                 elif egyenleg - felvetel >= 0:
                     egyenleg -= felvetel
-                    return "Felvette a pénzt\n -----------------------", egyenleg, bank(egyenleg)
+                    print("Felvette a pénzt\n -----------------------")
+                    return egyenleg, bank(egyenleg)
         elif key == 4:
                 felvetel=100000
                 if egyenleg - felvetel < 0:
-                    return "Nincsen elég egyenleg a számlán\n -----------------------", bank(egyenleg)
+                    print("Nincsen elég egyenleg a számlán\n -----------------------")
+                    return bank(egyenleg)
                 elif egyenleg - felvetel >= 0:
                     egyenleg -= felvetel
-                    return "Felvette a pénzt\n -----------------------", egyenleg, bank(egyenleg)
+                    print("Felvette a pénzt\n -----------------------")
+                    return egyenleg, bank(egyenleg)
         elif key == 5:
                 felvetel=50000;
                 if egyenleg - felvetel < 0:
-                    return "Nincsen elég egyenleg a számlán\n -----------------------", bank(egyenleg)
+                    print("Nincsen elég egyenleg a számlán\n -----------------------")
+                    return bank(egyenleg)
                 elif egyenleg - felvetel >= 0:
                     egyenleg -= felvetel
-                    return "Felvette a pénzt\n -----------------------", egyenleg, bank(egyenleg)
+                    print("Felvette a pénzt\n -----------------------")
+                    return egyenleg, bank(egyenleg)
         elif key == 6:
                 felvetel=10000;
                 if egyenleg - felvetel < 0:
-                    return "Nincsen elég egyenleg a számlán\n -----------------------", bank(egyenleg)
+                    print("Nincsen elég egyenleg a számlán\n -----------------------")
+                    return bank(egyenleg)
                 elif egyenleg - felvetel >= 0:
                     egyenleg -= felvetel
-                    return "Felvette a pénzt\n -----------------------", egyenleg, bank(egyenleg)
+                    print("Felvette a pénzt\n -----------------------")
+                    return egyenleg, bank(egyenleg)
         elif key == 7:
                 felvetel = int(input("Adja meg az összeget! "))
                 while felvetel % 1000 != 0:
                     felvetel = int(input("Ezerrel osztható számot adjon meg! "))
                     if egyenleg - felvetel < 0:
-                        return "Nincsen elég egyenleg a számlán\n -----------------------", bank(egyenleg)
+                        print("Nincsen elég egyenleg a számlán\n -----------------------")
+                        return bank(egyenleg)
                     elif egyenleg - felvetel >= 0:
                         egyenleg -= felvetel
-                        return "Felvette a pénzt\n -----------------------", egyenleg, bank(egyenleg)
+                        print("Felvette a pénzt\n -----------------------")
+                        return egyenleg, bank(egyenleg)
 
 def befizetes(egyenleg):
     befizet = int(input("Mennyit szeretne befizetni? "))
@@ -125,6 +139,35 @@ def dobokocka(egyenleg):
         casino(egyenleg)
         
 def lotto(egyenleg):
-    pass
-
+    tippek = []
+    helyes = 0
+    for _ in range(5):
+        tipp = int(input("Adja meg az 1. tippet"))
+        tippek.append(tipp)
+    for _ in range(5):
+        nyeroszam = random.randint(1,90)
+        nyeroszamok = []
+        nyeroszamok.append(nyeroszam)
+    for nyeroszam in nyeroszamok:
+        for tipp in tippek:
+            if tipp == nyeroszam:
+                helyes += 1
+    if helyes == 5:
+        nyeremeny = 1400000000
+        print(f"{helyes}db helyes tippet adott meg, nyereménye: {nyeremeny}")
+    elif helyes == 4:
+        nyeremeny = 0
+        print(f"{helyes}db helyes tippet adott meg, nyereménye: {nyeremeny}")
+    elif helyes == 3:
+        nyeremeny = 0
+        print(f"{helyes}db helyes tippet adott meg, nyereménye: {nyeremeny}")
+    elif helyes == 2:
+        nyeremeny = 0
+        print(f"{helyes}db helyes tippet adott meg, nyereménye: {nyeremeny}")
+    elif helyes == 1:
+        nyeremeny = 0
+        print(f"{helyes}db helyes tippet adott meg, nyereménye: {nyeremeny}")
+    elif helyes == 0:
+        print("Nem volt helyes tipp")
+ 
 lobby(egyenleg)
