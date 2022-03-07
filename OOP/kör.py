@@ -7,7 +7,7 @@ class Kor:
         self.r = r
         self.kozeppont = kozeppont
     def terulet(self):
-        return self.r*self.r*math.pi
+        return sself.r*self.r*math.pi
     def kerulet(self):
         return 2*self.r*math.pi
     def info(self):
