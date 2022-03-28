@@ -1,7 +1,7 @@
 Igen
-A 5. napon -2 fokos hï¿½mï¿½rsï¿½klet volt
-14 alkalommal volt -2ï¿½C alatti mï¿½rve
-A legnagyobb mï¿½rt hï¿½mï¿½rsï¿½klet 18ï¿½C
-A legkisebb mï¿½rt hï¿½mï¿½rsï¿½klet -20ï¿½C
-Az ï¿½tlagos hï¿½mï¿½rsï¿½klet 0.07ï¿½C volt
-A hï¿½napban a legnagyobb hï¿½ingadozï¿½s 38ï¿½C volt
+A 5. napon -2 fokos hõmérséklet volt
+14 alkalommal volt -2°C alatti mérve
+A legnagyobb mért hõmérséklet 18°C
+A legkisebb mért hõmérséklet -20°C
+Az átlagos hõmérséklet 0.07°C volt
+A hónapban a legnagyobb hõingadozás 20°C volt

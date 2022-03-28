@@ -16,6 +16,7 @@ for _ in range(2):
     foglalkozas = input("Adja meg a foglalkozását")
     nemzetiseg = input("Adja meg a nemzetiségét (a/n)")
     híres_nő = Hiresno(nev, foglalkozas, nemzetiseg)
+    
     híres_nők.append(híres_nő)
 
 for híres_nő in híres_nők:
