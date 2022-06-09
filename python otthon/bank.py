@@ -166,6 +166,7 @@ def dobokocka(egyenleg):
     else:
         print("Nem nyert :(")
         casino(egyenleg)
+<<<<<<< HEAD
 
 #Lottó   
 def lotto(egyenleg):
@@ -178,6 +179,18 @@ def lotto(egyenleg):
         tippek.append(tipp)
     for _ in range(5):
         nyeroszam = random.randint(1,90)
+=======
+        
+def lotto(egyenleg):
+    tippek = []
+    helyes = 0
+    for _ in range(5):
+        tipp = int(input("Adja meg az 1. tippet"))
+        tippek.append(tipp)
+    for _ in range(5):
+        nyeroszam = random.randint(1,90)
+        nyeroszamok = []
+>>>>>>> a14f8a85954e57a2837951be7c070056b0fe25a3
         nyeroszamok.append(nyeroszam)
     for nyeroszam in nyeroszamok:
         for tipp in tippek:
@@ -186,6 +199,7 @@ def lotto(egyenleg):
     if helyes == 5:
         nyeremeny = 1400000000
         print(f"{helyes}db helyes tippet adott meg, nyereménye: {nyeremeny}")
+<<<<<<< HEAD
         egyenleg += nyeremeny
     elif helyes == 4:
         nyeremeny = 10000000
@@ -406,4 +420,21 @@ def legyenonis(egyenleg):
         else:
             print(f"Helytelen választ adtál meg. A megoldás {kerdes.megoldas} volt.")
             lobby(egyenleg)
+=======
+    elif helyes == 4:
+        nyeremeny = 0
+        print(f"{helyes}db helyes tippet adott meg, nyereménye: {nyeremeny}")
+    elif helyes == 3:
+        nyeremeny = 0
+        print(f"{helyes}db helyes tippet adott meg, nyereménye: {nyeremeny}")
+    elif helyes == 2:
+        nyeremeny = 0
+        print(f"{helyes}db helyes tippet adott meg, nyereménye: {nyeremeny}")
+    elif helyes == 1:
+        nyeremeny = 0
+        print(f"{helyes}db helyes tippet adott meg, nyereménye: {nyeremeny}")
+    elif helyes == 0:
+        print("Nem volt helyes tipp")
+ 
+>>>>>>> a14f8a85954e57a2837951be7c070056b0fe25a3
 lobby(egyenleg)
