@@ -1,0 +1,22 @@
+[INFO   ] Logger: Record log in T:\Suli\10.b\python/python otthon/kivytanulas/conf\logs\kivy_22-04-10_25.txt
+[INFO   ] deps: Successfully imported "kivy_deps.angle" 0.3.2
+[INFO   ] deps: Successfully imported "kivy_deps.glew" 0.3.1
+[INFO   ] deps: Successfully imported "kivy_deps.sdl2" 0.4.5
+[INFO   ] Kivy: v2.1.0
+[INFO   ] Kivy: Installed at "C:\Users\Atisd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\kivy\__init__.py"
+[INFO   ] Python: v3.9.12 (tags/v3.9.12:b28265d, Mar 23 2022, 23:52:46) [MSC v.1929 64 bit (AMD64)]
+[INFO   ] Python: Interpreter at "C:\Users\Atisd\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\python.exe"
+[INFO   ] Logger: Purge log fired. Processing...
+[INFO   ] Logger: Purge finished!
+[INFO   ] Factory: 189 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2 (img_pil, img_ffpyplayer ignored)
+[INFO   ] Text: Provider: sdl2
+[CRITICAL] App.root must be an _instance_ of Widget
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "t:\Suli\10.b\python\python otthon\kivytanulas\kivykivy.py", line 36, in <module>
+[WARNING] stderr:     TesztApp().run()
+[WARNING] stderr:   File "C:\Users\Atisd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\kivy\app.py", line 954, in run
+[WARNING] stderr:     self._run_prepare()
+[WARNING] stderr:   File "C:\Users\Atisd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\kivy\app.py", line 930, in _run_prepare
+[WARNING] stderr:     raise Exception('Invalid instance in App.root')
+[WARNING] stderr: Exception: Invalid instance in App.root

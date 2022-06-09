@@ -1,0 +1,51 @@
+[INFO   ] Logger: Record log in T:\Suli\10.b\python/python otthon/kivytanulas/conf\logs\kivy_22-04-14_0.txt
+[INFO   ] deps: Successfully imported "kivy_deps.angle" 0.3.2
+[INFO   ] deps: Successfully imported "kivy_deps.glew" 0.3.1
+[INFO   ] deps: Successfully imported "kivy_deps.sdl2" 0.4.5
+[INFO   ] Kivy: v2.1.0
+[INFO   ] Kivy: Installed at "C:\Users\Atisd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\kivy\__init__.py"
+[INFO   ] Python: v3.9.12 (tags/v3.9.12:b28265d, Mar 23 2022, 23:52:46) [MSC v.1929 64 bit (AMD64)]
+[INFO   ] Python: Interpreter at "C:\Users\Atisd\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\python.exe"
+[INFO   ] Logger: Purge log fired. Processing...
+[INFO   ] Logger: Purge finished!
+[INFO   ] Factory: 189 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2 (img_pil, img_ffpyplayer ignored)
+[INFO   ] Text: Provider: sdl2
+[INFO   ] Window: Provider: sdl2
+[INFO   ] GL: Using the "OpenGL" graphics system
+[INFO   ] GL: GLEW initialization succeeded
+[INFO   ] GL: Backend used <glew>
+[INFO   ] GL: OpenGL version <b'4.6.0 NVIDIA 511.65'>
+[INFO   ] GL: OpenGL vendor <b'NVIDIA Corporation'>
+[INFO   ] GL: OpenGL renderer <b'NVIDIA GeForce RTX 3060/PCIe/SSE2'>
+[INFO   ] GL: OpenGL parsed version: 4, 6
+[INFO   ] GL: Shading version <b'4.60 NVIDIA'>
+[INFO   ] GL: Texture max size <32768>
+[INFO   ] GL: Texture max units <32>
+[INFO   ] Window: auto add sdl2 input provider
+[INFO   ] Window: virtual keyboard not allowed, single mode, not docked
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "kivy\_event.pyx", line 235, in kivy._event.EventDispatcher.__init__
+[WARNING] stderr: TypeError: object.__init__() takes exactly one argument (the instance to initialize)
+[WARNING] stderr: 
+[WARNING] stderr: The above exception was the direct cause of the following exception:
+[WARNING] stderr: 
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "t:\Suli\10.b\python\python otthon\kivytanulas\kivykivy.py", line 48, in <module>
+[WARNING] stderr:     TesztApp().run()
+[WARNING] stderr:   File "C:\Users\Atisd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\kivy\app.py", line 954, in run
+[WARNING] stderr:     self._run_prepare()
+[WARNING] stderr:   File "C:\Users\Atisd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\kivy\app.py", line 924, in _run_prepare
+[WARNING] stderr:     root = self.build()
+[WARNING] stderr:   File "t:\Suli\10.b\python\python otthon\kivytanulas\kivykivy.py", line 45, in build
+[WARNING] stderr:     return AlapWidget()
+[WARNING] stderr:   File "t:\Suli\10.b\python\python otthon\kivytanulas\kivykivy.py", line 26, in __init__
+[WARNING] stderr:     button1 = Button(text="Button 1", size=(100,50), pos=(0,0), id="gomb1")
+[WARNING] stderr:   File "C:\Users\Atisd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\kivy\uix\behaviors\button.py", line 121, in __init__
+[WARNING] stderr:     super(ButtonBehavior, self).__init__(**kwargs)
+[WARNING] stderr:   File "C:\Users\Atisd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\kivy\uix\label.py", line 317, in __init__
+[WARNING] stderr:     super(Label, self).__init__(**kwargs)
+[WARNING] stderr:   File "C:\Users\Atisd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\kivy\uix\widget.py", line 357, in __init__
+[WARNING] stderr:     super(Widget, self).__init__(**kwargs)
+[WARNING] stderr:   File "kivy\_event.pyx", line 238, in kivy._event.EventDispatcher.__init__
+[WARNING] stderr: TypeError: Properties ['id'] passed to __init__ may not be existing property names. Valid properties are ['always_release', 'anchors', 'background_color', 'background_disabled_down', 'background_disabled_normal', 'background_down', 'background_normal', 'base_direction', 'bold', 'border', 'center', 'center_x', 'center_y', 'children', 'cls', 'color', 'disabled', 'disabled_color', 'disabled_outline_color', 'ellipsis_options', 'font_blended', 'font_context', 'font_family', 'font_features', 'font_hinting', 'font_kerning', 'font_name', 'font_size', 'halign', 'height', 'ids', 'is_shortened', 'italic', 'last_touch', 'line_height', 'markup', 'max_lines', 'min_state_time', 'mipmap', 'motion_filter', 'opacity', 'outline_color', 'outline_width', 'padding', 'padding_x', 'padding_y', 'parent', 'pos', 'pos_hint', 'refs', 'right', 'shorten', 'shorten_from', 'size', 'size_hint', 'size_hint_max', 'size_hint_max_x', 'size_hint_max_y', 'size_hint_min', 'size_hint_min_x', 'size_hint_min_y', 'size_hint_x', 'size_hint_y', 'split_str', 'state', 'strikethrough', 'strip', 'text', 'text_language', 'text_size', 'texture', 'texture_size', 'top', 'underline', 'unicode_errors', 'valign', 'width', 'x', 'y']
