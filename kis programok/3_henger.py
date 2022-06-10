@@ -28,7 +28,7 @@ def nevelo():
 def jelzo():
     return random.choice(["piros", "nagy", "könnyed", "buta"])
 
-nevelo()
+#nevelo()
 
 #3.
 class Henger:
@@ -36,11 +36,16 @@ class Henger:
         self.sugar = sugar
         self.kozeppont = kozeppont
         self.magassag = magassag
+        self.terfogat = self.sugar**2*math.pi*self.magassag
+        self.terulet = self.sugar *math.pow(math.pi,2)
+        self.felszin = 2*self.sugar**2*math.pi+2*self.sugar*math.pi*self.magassag
+        #Ez valamiért nem működik :C
         def terulet(self):
-            return self.sugar*math.pow(math.pi,2)
-        def felszin():
-            pass
-        def terfogat():
-            pass
+            return self.sugar *math.pow(math.pi,2)
+        def felszin(self):
+            return 2*self.sugar**2*math.pi+2*self.sugar*math.pi*self.magassag # A
+        def terfogat(self):
+            return self.sugar**2*math.pi*self.magassag # V
 
 hangszer = Henger(5,(2,4),12)
+print(f"A térfogata:{hangszer.terfogat:.2f} \nA felszíne:{hangszer.felszin:.2f}\nA területe:{hangszer.terulet:.2f}")
